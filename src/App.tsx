@@ -950,20 +950,20 @@ function SkillsSection() {
   }, []);
 
   const seoSkills = [
-    { name: 'On-Page SEO', level: 95 },
-    { name: 'Off-Page SEO', level: 90 },
-    { name: 'Technical SEO', level: 85 },
-    { name: 'Local SEO', level: 92 },
-    { name: 'Keyword Research', level: 95 },
-    { name: 'Content Optimization', level: 88 },
+    'On-Page SEO',
+    'Off-Page SEO',
+    'Technical SEO',
+    'Local SEO',
+    'Keyword Research',
+    'Content Optimization',
   ];
 
   const marketingSkills = [
-    { name: 'Social Media Management', level: 85 },
-    { name: 'Google Ads', level: 78 },
-    { name: 'Meta Ads', level: 75 },
-    { name: 'GBP Optimization', level: 92 },
-    { name: 'Analytics & Reporting', level: 88 },
+    'Social Media Management',
+    'Google Ads',
+    'Meta Ads',
+    'GBP Optimization',
+    'Analytics & Reporting',
   ];
 
   const tools = [
@@ -1008,26 +1008,17 @@ function SkillsSection() {
               <Search className="w-5 h-5 text-primary-500" />
               SEO Skills
             </h3>
-            <div className="space-y-5">
+            <div className="grid grid-cols-2 gap-3">
               {seoSkills.map((skill, index) => (
-                <div key={skill.name}>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-secondary-700 font-medium">
-                      {skill.name}
-                    </span>
-                    <span className="text-sm text-primary-600 font-semibold">
-                      {skill.level}%
-                    </span>
-                  </div>
-                  <div className="skill-bar">
-                    <div
-                      className="skill-bar-fill"
-                      style={{
-                        width: isVisible ? `${skill.level}%` : '0%',
-                        transitionDelay: `${300 + index * 100}ms`,
-                      }}
-                    />
-                  </div>
+                <div
+                  key={skill}
+                  className={`flex items-center gap-2 px-4 py-3 bg-secondary-50 rounded-xl border border-secondary-100 transition-all duration-500 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                  }`}
+                  style={{ transitionDelay: `${300 + index * 50}ms` }}
+                >
+                  <Check className="w-4 h-4 text-primary-500" />
+                  <span className="text-secondary-700 font-medium text-sm">{skill}</span>
                 </div>
               ))}
             </div>
@@ -1043,26 +1034,17 @@ function SkillsSection() {
               <BarChart3 className="w-5 h-5 text-primary-500" />
               Marketing Skills
             </h3>
-            <div className="space-y-5">
+            <div className="grid grid-cols-2 gap-3">
               {marketingSkills.map((skill, index) => (
-                <div key={skill.name}>
-                  <div className="flex justify-between items-center mb-2">
-                    <span className="text-secondary-700 font-medium">
-                      {skill.name}
-                    </span>
-                    <span className="text-sm text-primary-600 font-semibold">
-                      {skill.level}%
-                    </span>
-                  </div>
-                  <div className="skill-bar">
-                    <div
-                      className="skill-bar-fill"
-                      style={{
-                        width: isVisible ? `${skill.level}%` : '0%',
-                        transitionDelay: `${400 + index * 100}ms`,
-                      }}
-                    />
-                  </div>
+                <div
+                  key={skill}
+                  className={`flex items-center gap-2 px-4 py-3 bg-secondary-50 rounded-xl border border-secondary-100 transition-all duration-500 ${
+                    isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
+                  }`}
+                  style={{ transitionDelay: `${400 + index * 50}ms` }}
+                >
+                  <Check className="w-4 h-4 text-primary-500" />
+                  <span className="text-secondary-700 font-medium text-sm">{skill}</span>
                 </div>
               ))}
             </div>
