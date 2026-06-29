@@ -401,7 +401,7 @@ function AboutSection() {
               <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-sm px-3 py-1.5 rounded-full shadow-soft text-xs font-medium text-secondary-600">
                 <span className="inline-flex items-center gap-1">
                   <Award className="w-3 h-3 text-primary-500" />
-                  SEO Expert
+                  SEO Analyst
                 </span>
               </div>
             </div>
@@ -768,7 +768,7 @@ function ProjectsSection() {
       ],
     },
     {
-      title: 'Bangalore SEO Expert',
+      title: 'Bangalore SEO Analyst',
       industry: 'Digital Marketing',
       color: 'from-accent-600 to-accent-800',
       overview:
@@ -786,8 +786,8 @@ function ProjectsSection() {
         'Enhanced lead generation',
       ],
       keywords: [
-        'SEO Expert in Bangalore',
-        'Hire SEO Expert in Bangalore',
+        'SEO Analyst in Bangalore',
+        'Hire SEO Analyst in Bangalore',
         'SEO Freelancer Bangalore',
       ],
     },
